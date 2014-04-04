@@ -5,7 +5,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    name='cymru-api',
+    name='team-cymru-api',
     test_suite="tests",
     version='1',
     packages=['team_cymru', 'team_cymru.test'],

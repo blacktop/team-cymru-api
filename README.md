@@ -1,6 +1,6 @@
-![cymru-api logo](https://raw.githubusercontent.com/blacktop/cymru-api/master/doc/logo.png)
+![cymru-api logo](https://raw.githubusercontent.com/blacktop/team-cymru-api/master/doc/logo.png)
 
-cymru-api
+team-cymru-api
 =========
 
 Team Cymru - Malware Hash Registry API
