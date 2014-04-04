@@ -4,3 +4,5 @@ cymru-api
 =========
 
 Team Cymru - Malware Hash Registry API
+
+https://www.team-cymru.org/Services/
