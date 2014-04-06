@@ -14,7 +14,4 @@ setup(
     author='blacktop',
     author_email='',
     description='Team Cymru - Malware Hash Registry API',
-    install_requires=[
-        "requests >= 2.2.1",
-    ],
 )
