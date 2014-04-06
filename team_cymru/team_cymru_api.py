@@ -30,6 +30,8 @@ class TeamCymruApi():
                 'last_seen': '01-06-2014T22:34:57Z'
             }
 
+        source: http://code.google.com/p/malwarecookbook/
+        site : http://www.team-cymru.org/Services/MHR/
         """
         request = '%s\r\n' % this_hash
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
