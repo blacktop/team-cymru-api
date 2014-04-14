@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 __author__ = 'Josh Maine'
+__version__ = '1'
+__license__ = 'GPLv3'
+
 from unittest import TestCase
 from team_cymru.team_cymru_api import TeamCymruApi
 
@@ -27,6 +29,6 @@ class InitTests(TestCase):
         myteam = TeamCymruApi()
 
         try:
-            print myteam.get_cymru('')
+            print myteam.get_cymru(False)
         except Exception as e:
             self.fail(e)

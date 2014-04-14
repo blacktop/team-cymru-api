@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+__author__ = 'Josh Maine'
+__version__ = '1'
+__license__ = 'GPLv3'
+
 import re
 import socket
 from time import strftime, gmtime
-
-__author__ = 'Josh Maine'
-
 
 class TeamCymruApi():
     def __init__(self):
@@ -67,7 +68,7 @@ def vaildate_input(user_input):
     """
     #: Check that input is a string
     #: Check that it is at least as long as a md5 hash
-    if len(user_input) >= 32 and isinstance(user_input, basestring):
+    if isinstance(user_input, basestring) and len(user_input) >= 32:
         found_md5s = __extract_md5_from_hash_list(user_input)
         found_sha1s = __extract_sha1_from_hash_list(user_input)
         #: Check that hash list is not empty or mixed
