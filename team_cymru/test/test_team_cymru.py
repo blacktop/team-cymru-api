@@ -11,7 +11,7 @@ class InitTests(TestCase):
         myteam = TeamCymruApi()
 
         try:
-            print myteam.get_cymru('039ea049f6d0f36f55ec064b3b371c464545454')
+            print myteam.get_cymru('039ea049f6d0f36f55ec064b3b371c46')
         except Exception as e:
             self.fail(e)
 
@@ -20,5 +20,13 @@ class InitTests(TestCase):
 
         try:
             print myteam.get_cymru('5e28284f9b5f9097640d58a73d38ad4c')
+        except Exception as e:
+            self.fail(e)
+
+    def test_hash_bad_input(self):
+        myteam = TeamCymruApi()
+
+        try:
+            print myteam.get_cymru('')
         except Exception as e:
             self.fail(e)

@@ -7,4 +7,4 @@ python:
 # command to run tests
 script:
   - python setup.py install
-  - nosetests
+  - python team_cymru.test.test_team_cymru.py
