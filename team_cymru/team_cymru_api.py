@@ -3,7 +3,6 @@
 import re
 import socket
 from time import strftime, gmtime
-import datetime
 
 __author__ = 'Josh Maine'
 
