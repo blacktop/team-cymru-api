@@ -9,7 +9,7 @@ setup(
     test_suite="tests",
     version='1',
     packages=['team_cymru', 'team_cymru.test'],
-    url='https://github.com/blacktop/cymru-api',
+    url='https://github.com/blacktop/team-cymru-api',
     license='GPLv3',
     author='blacktop',
     author_email='',
