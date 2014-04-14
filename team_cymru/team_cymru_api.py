@@ -3,6 +3,7 @@
 import re
 import socket
 from time import strftime, gmtime
+import datetime
 
 __author__ = 'Josh Maine'
 
@@ -46,7 +47,7 @@ class TeamCymruApi():
             if len(response) > 0:
                 resp_re = re.compile('\S+ (\d+) (\S+)')
                 match = resp_re.match(response)
-                return {'last_seen': strftime("%m-%d-%YT%H:%M:%SZ", gmtime(int(match.group(1)))),
+                return {'last_seen_utc': strftime("%Y-%m-%dT%H:%M:%SZ", gmtime(int(match.group(1)))),
                         'detected': match.group(2)}
         except socket.error:
             return dict(error='socket error')
