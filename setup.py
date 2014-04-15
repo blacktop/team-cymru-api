@@ -7,11 +7,11 @@ except ImportError:
 setup(
     name='team-cymru-api',
     test_suite="tests",
-    version='1',
+    version='1.0.0',
     packages=['team_cymru', 'team_cymru.test'],
     url='https://github.com/blacktop/team-cymru-api',
     license='GPLv3',
     author='blacktop',
-    author_email='',
+    author_email='dev@blacktop.io',
     description='Team Cymru - Malware Hash Registry API',
 )

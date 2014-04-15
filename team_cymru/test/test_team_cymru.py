@@ -6,14 +6,14 @@ __license__ = 'GPLv3'
 
 from unittest import TestCase
 from team_cymru.team_cymru_api import TeamCymruApi
-
+import json
 
 class InitTests(TestCase):
     def test_hash_found(self):
         myteam = TeamCymruApi()
 
         try:
-            print myteam.get_cymru('039ea049f6d0f36f55ec064b3b371c46')
+            print json.dumps(myteam.get_cymru('039ea049f6d0f36f55ec064b3b371c46'), sort_keys=True, indent=4)
         except Exception as e:
             self.fail(e)
 
@@ -21,7 +21,7 @@ class InitTests(TestCase):
         myteam = TeamCymruApi()
 
         try:
-            print myteam.get_cymru('5e28284f9b5f9097640d58a73d38ad4c')
+            print json.dumps(myteam.get_cymru('5e28284f9b5f9097640d58a73d38ad4c'), sort_keys=True, indent=4)
         except Exception as e:
             self.fail(e)
 
@@ -29,6 +29,6 @@ class InitTests(TestCase):
         myteam = TeamCymruApi()
 
         try:
-            print myteam.get_cymru(False)
+            print json.dumps(myteam.get_cymru(False), sort_keys=True, indent=4)
         except Exception as e:
             self.fail(e)
