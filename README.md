@@ -25,7 +25,8 @@ team_cymru = TeamCymruApi()
 response =  team_cymru.get_cymru('039ea049f6d0f36f55ec064b3b371c46')
 print json.dumps(response, sort_keys=False, indent=4)
 ```
-Output:
+
+#### Output:
 ```json
 {
     "last_seen_utc": "2014-01-06T22:34:57Z", 
