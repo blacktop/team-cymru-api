@@ -48,5 +48,5 @@ Contributing
 2. Create a branch (`git checkout -b my_team_cymru_api`)
 3. Commit your changes (`git commit -am "Added Something Cool"`)
 4. Push to the branch (`git push origin my_team_cymru_api`)
-5. Open a [Pull Request][1]
+5. Open a [Pull Request](https://github.com/blacktop/team-cymru-api/pulls)
 6. Wait for me to figure out what the heck a pull request is...
