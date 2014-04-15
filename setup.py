@@ -7,7 +7,7 @@ except ImportError:
 setup(
     name='team-cymru-api',
     test_suite="tests",
-    version='1.0.0',
+    version='1.0.1',
     packages=['team_cymru', 'team_cymru.test'],
     url='https://github.com/blacktop/team-cymru-api',
     license='GPLv3',

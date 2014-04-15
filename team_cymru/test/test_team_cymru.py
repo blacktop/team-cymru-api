@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 __author__ = 'Josh Maine'
-__version__ = '1'
+__version__ = '1.0.1'
 __license__ = 'GPLv3'
 
 from unittest import TestCase
