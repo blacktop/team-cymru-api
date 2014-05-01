@@ -2,7 +2,7 @@
 
 team-cymru-api
 =========
-[![PyPI version](https://badge.fury.io/py/team-cymru-api.svg)](http://badge.fury.io/py/team-cymru-api) [![Build Status](https://travis-ci.org/blacktop/team-cymru-api.svg?branch=master)](https://travis-ci.org/blacktop/team-cymru-api)
+[![PyPI version](https://badge.fury.io/py/team-cymru-api.svg)](http://badge.fury.io/py/team-cymru-api) [![Build Status](https://travis-ci.org/blacktop/team-cymru-api.svg?branch=master)](https://travis-ci.org/blacktop/team-cymru-api) [![Downloads](https://pypip.in/download/team-cymru-api/badge.png)](https://pypi.python.org/pypi/team-cymru-api/)
 
 Team Cymru - Malware Hash Registry API
 
