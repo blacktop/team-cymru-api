@@ -18,8 +18,8 @@ Usage
 -----
 ```python
 import json
-from team_cymru.team_cymru_api import TeamCymruApi
-    
+from team_cymru_api import TeamCymruApi
+
 team_cymru = TeamCymruApi()
 
 response =  team_cymru.get_cymru('039ea049f6d0f36f55ec064b3b371c46')
@@ -29,8 +29,8 @@ print json.dumps(response, sort_keys=False, indent=4)
 #### Output:
 ```json
 {
-    "last_seen_utc": "2014-01-06T22:34:57Z", 
-    "response_code": 200, 
+    "last_seen_utc": "2014-01-06T22:34:57Z",
+    "response_code": 200,
     "detected": "86"
 }
 ```

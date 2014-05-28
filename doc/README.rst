@@ -31,7 +31,7 @@ Usage
 .. code-block:: python
 
     import json
-    from team_cymru.team_cymru_api import TeamCymruApi
+    from team_cymru_api import TeamCymruApi
 
     team_cymru = TeamCymruApi()
 
