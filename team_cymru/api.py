@@ -1,12 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__author__ = 'Josh Maine'
-__version__ = '1.0.1'
-__license__ = 'GPLv3'
+
+"""
+team-cymru-api
+~~~~~~~~~~~~~~
+
+This module implements the Team Cymru API.
+
+:copyright: (c) 2014 by Josh "blacktop" Maine.
+:license: GPLv3, see LICENSE for more details.
+"""
 
 import re
 import socket
-from time import strftime, gmtime
+from time import gmtime, strftime
 
 
 class TeamCymruApi():
@@ -19,8 +26,9 @@ class TeamCymruApi():
         The Malware Hash Registry (MHR) project is a look-up service similar to
         the Team Cymru IP address to ASN mapping project. This project differs
         however, in that you can query our service for a computed MD5 or SHA-1
-        hash of a file and, if it is malware and we know about it, we return the
-        last time we've seen it along with an approximate anti-virus detection percentage.
+        hash of a file and, if it is malware and we know about it, we return
+        the last time we've seen it along with an approximate anti-virus
+        detection percentage.
 
         :param this_hash: Can be a md5 or sha1 hash.
         :return: result dictionary or socket error
@@ -50,11 +58,15 @@ class TeamCymruApi():
                     resp_re = re.compile('\S+ (\d+) (\S+)')
                     match = resp_re.match(response)
                     if 'NO_DATA' in match.group(2):
-                        return dict(last_seen_utc=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime(int(match.group(1)))),
-                                    detected=match.group(2), response_code=404)
+                        return dict(last_seen_utc=strftime("%Y-%m-%dT%H:%M:%SZ",
+                                                   gmtime(int(match.group(1)))),
+                                                   detected=match.group(2),
+                                                   response_code=404)
                     else:
-                        return dict(last_seen_utc=strftime("%Y-%m-%dT%H:%M:%SZ", gmtime(int(match.group(1)))),
-                                    detected=match.group(2), response_code=200)
+                        return dict(last_seen_utc=strftime("%Y-%m-%dT%H:%M:%SZ",
+                                                   gmtime(int(match.group(1)))),
+                                                   detected=match.group(2),
+                                                   response_code=200)
             except socket.error:
                 return dict(error='socket error', response_code=500)
         else:
@@ -87,8 +99,8 @@ class TeamCymruApi():
         :param data: Input string
         :return: List of md5 hashes or single md5 hash
         """
-        found_md5_hashes = re.findall(r'(?i)(?<![a-zA-Z0-9])[a-fA-F0-9]{32}(?![a-zA-Z0-9])', data)
-        hash_list = list(set(found_md5_hashes))
+        found = re.findall(r'(?i)(?<![a-zA-Z0-9])[a-fA-F0-9]{32}(?![a-zA-Z0-9])', data)
+        hash_list = list(set(found))
         if len(hash_list) == 1:
             return hash_list[0]
         else:
@@ -101,8 +113,8 @@ class TeamCymruApi():
         :param data: Input string
         :return: List of sha1 hashes or single sha1 hash
         """
-        found_sha1_hashes = re.findall(r'(?i)(?<![a-zA-Z0-9])[a-fA-F0-9]{40}(?![a-zA-Z0-9])', data)
-        hash_list = list(set(found_sha1_hashes))
+        found = re.findall(r'(?i)(?<![a-zA-Z0-9])[a-fA-F0-9]{40}(?![a-zA-Z0-9])', data)
+        hash_list = list(set(found))
         if len(hash_list) == 1:
             return hash_list[0]
         else:
