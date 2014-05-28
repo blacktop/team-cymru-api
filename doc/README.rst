@@ -22,26 +22,33 @@ https://www.team-cymru.org/Services/
 Installation
 ------------
 .. code-block:: bash
+
     $ pip install team-cymru-api
+
 
 Usage
 -----
 .. code-block:: python
-  import json
-  from team_cymru.team_cymru_api import TeamCymruApi
 
-  team_cymru = TeamCymruApi()
+    import json
+    from team_cymru.team_cymru_api import TeamCymruApi
 
-  response =  team_cymru.get_cymru('039ea049f6d0f36f55ec064b3b371c46')
-  print json.dumps(response, sort_keys=False, indent=4)
+    team_cymru = TeamCymruApi()
 
-#### Output:
+    response =  team_cymru.get_cymru('039ea049f6d0f36f55ec064b3b371c46')
+    print json.dumps(response, sort_keys=False, indent=4)
+
+
+Output:
+-------
 .. code-block:: json
-  {
-      "last_seen_utc": "2014-01-06T22:34:57Z",
-      "response_code": 200,
-      "detected": "86"
-  }
+
+    {
+        "last_seen_utc": "2014-01-06T22:34:57Z",
+        "response_code": 200,
+        "detected": "86"
+    }
+
 
 Testing
 -------
